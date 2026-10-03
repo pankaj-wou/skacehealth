@@ -1,11 +1,16 @@
 import { services } from './services';
 import { doctors } from './doctors';
 import { hospitals } from './hospitals';
-export const pages: Record<string, { title: string; description: string }> = {
+export const pages: Record<
+  string,
+  { title: string; description: string; eyebrow?: string; breadcrumb?: string }
+> = {
   about: {
-    title: 'Healthcare built around people',
+    eyebrow: 'ABOUT US',
+    breadcrumb: 'About Us',
+    title: 'Healthcare that is accessible, advanced and connected',
     description:
-      'Discover our story, our purpose and the people shaping the next chapter of SKACE Healthtech.',
+      'SKACE Healthtech is building integrated super-speciality healthcare services to make quality care cost-effective, accessible and hassle-free for every section of society.',
   },
   network: {
     title: 'Closer to you. Connected for you.',

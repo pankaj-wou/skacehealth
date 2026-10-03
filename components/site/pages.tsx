@@ -34,7 +34,7 @@ import { researchCollaboration } from '@/src/data/team';
 import { contact } from '@/src/data/contact';
 import { pageInfo } from '@/src/data/pages';
 import { patientFAQs, testimonials, news, jobs } from '@/src/data/editorial';
-function Intro({ path }: { path: string }) {
+export function Intro({ path }: { path: string }) {
   const info = pageInfo(path);
   return (
     <section className="page-intro tinted">
@@ -48,9 +48,17 @@ function Intro({ path }: { path: string }) {
               <span>/</span>
             </>
           )}
-          <span>{info.title}</span>
+          <span>
+            {'breadcrumb' in info && info.breadcrumb
+              ? info.breadcrumb
+              : info.title}
+          </span>
         </div>
-        <span className="eyebrow">SKACE HEALTHTECH</span>
+        <span className="eyebrow">
+          {'eyebrow' in info && info.eyebrow
+            ? info.eyebrow
+            : 'SKACE HEALTHTECH'}
+        </span>
         <h1>{info.title}</h1>
         <p>{info.description}</p>
       </div>
@@ -79,69 +87,6 @@ export function SitePage({ path }: { path: string }) {
   return (
     <>
       <Intro path={path} />
-      {path === 'about' && (
-        <>
-          <section className="section wrap split">
-            <div>
-              <span className="eyebrow">SKACE HEALTHTECH PVT LTD</span>
-              <h2>Ace Group of Hospitals</h2>
-              <p className="lead">{company.intro}</p>
-              <p>
-                Founded by Dr. Kuldeep Mahajan, Ace Group of Hospitals brings
-                together a multidisciplinary doctor panel and a network serving
-                communities around Kalyan, Diva and neighbouring locations. The
-                company’s priorities include preventive healthcare and
-                accessible, cost-effective specialist and surgical care.
-              </p>
-              <p>
-                Clinical services span medicine, surgery, oncology,
-                orthopaedics, neurology, cardiology, paediatrics and other
-                specialties. Neonatology and ICCU, PICU and NICU services are
-                also listed in the company’s service portfolio.
-              </p>
-            </div>
-            <HubSpokeDiagram />
-          </section>
-          <section className="tinted">
-            <div className="section wrap">
-              <SectionTitle
-                eyebrow="CARE & TECHNOLOGY"
-                title="A foundation for connected healthcare"
-              />
-              <div className="grid three">
-                {[
-                  [
-                    'Hospital care',
-                    'Two 50-bed superspeciality hospitals: Ace Hospital & Research Centre in Kalyan and Diva.',
-                  ],
-                  [
-                    'Step Down ICU at Home',
-                    'Launched in 2016 by Dr. Kuldeep Mahajan through cloud-based patient monitoring.',
-                  ],
-                  [
-                    'Preventive healthcare research',
-                    'Ongoing AI/ML work on the prediction and early diagnosis of chronic diseases.',
-                  ],
-                ].map(([t, d]) => (
-                  <article className="info-card" key={t}>
-                    <h3>{t}</h3>
-                    <p>{d}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
-          <section className="section wrap">
-            <SectionTitle
-              eyebrow="LEADERSHIP & PEOPLE"
-              title="People leading the next chapter"
-              link="Meet the team"
-              href="/leadership"
-            />
-            <TeamSection />
-          </section>
-        </>
-      )}
       {path === 'specialities' && (
         <section className="section wrap">
           <div className="grid four">
