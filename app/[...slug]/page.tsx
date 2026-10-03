@@ -3,7 +3,10 @@ import { routePaths, pageInfo } from '@/src/data/pages';
 import { notFound } from 'next/navigation';
 export const dynamicParams = false;
 export function generateStaticParams() {
-  return routePaths.filter(Boolean).map((p) => ({ slug: p.split('/') }));
+  // About has its own server-rendered route in app/about.
+  return routePaths
+    .filter((p) => p && p !== 'about')
+    .map((p) => ({ slug: p.split('/') }));
 }
 export async function generateMetadata({
   params,
