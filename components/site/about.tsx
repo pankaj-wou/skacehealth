@@ -45,14 +45,14 @@ function ItemList({ items }: { items: string[] }) {
 function ServiceBlock({ service: s }: { service: AboutService }) {
   return (
     <article className="about-service" id={s.id}>
-      <h3>{s.name}</h3>
+      <h4>{s.name}</h4>
       {s.tagline && <p className="about-tagline">{s.tagline}</p>}
       <p>{s.intro}</p>
-      <h4>{s.listLabel}:</h4>
+      <h5>{s.listLabel}:</h5>
       <ItemList items={s.items} />
       {s.subsections?.map((sub) => (
         <div className="about-subsection" key={sub.name}>
-          <h4>{sub.name}</h4>
+          <h5>{sub.name}</h5>
           {sub.text.map((t) => (
             <p key={t}>{t}</p>
           ))}
@@ -71,7 +71,7 @@ function ServiceBlock({ service: s }: { service: AboutService }) {
 const modelIcons = [Building2, Network, MapPin];
 const techIcons = [Cpu, Wifi, Glasses];
 
-export function AboutPage() {
+export default function AboutPage() {
   return (
     <>
       <nav className="about-toc wrap" aria-label="On this page">
@@ -175,20 +175,26 @@ export function AboutPage() {
             </a>
           ))}
         </nav>
-        <h3 className="about-group-title">Core super-speciality programmes</h3>
-        <div className="about-services">
-          {coreServices.map((s) => (
-            <ServiceBlock service={s} key={s.id} />
-          ))}
-        </div>
-        <h3 className="about-group-title">
-          Further specialities and clinical services
-        </h3>
-        <div className="about-services">
-          {additionalServices.map((s) => (
-            <ServiceBlock service={s} key={s.id} />
-          ))}
-        </div>
+        <section aria-labelledby="core-programmes">
+          <h3 className="about-group-title" id="core-programmes">
+            Core super-speciality programmes
+          </h3>
+          <div className="about-services">
+            {coreServices.map((s) => (
+              <ServiceBlock service={s} key={s.id} />
+            ))}
+          </div>
+        </section>
+        <section aria-labelledby="further-specialities">
+          <h3 className="about-group-title" id="further-specialities">
+            Further specialities and clinical services
+          </h3>
+          <div className="about-services">
+            {additionalServices.map((s) => (
+              <ServiceBlock service={s} key={s.id} />
+            ))}
+          </div>
+        </section>
       </section>
 
       <section className="tinted about-anchor" id="preventive-care">
@@ -197,9 +203,9 @@ export function AboutPage() {
             <span className="eyebrow">PREVENTIVE & PREDICTIVE HEALTHCARE</span>
             <h2>Moving from reactive medicine to proactive healthcare</h2>
             <p className="lead">{preventiveCare.intro}</p>
-            <h4 className="about-list-label">
+            <h3 className="about-list-label">
               Special attention is being given to chronic conditions such as:
-            </h4>
+            </h3>
             <ItemList items={preventiveCare.conditions} />
             <p>{preventiveCare.note}</p>
           </div>
@@ -245,13 +251,13 @@ export function AboutPage() {
       <section className="tinted about-anchor" id="vision-mission">
         <div className="section wrap split">
           <div>
-            <span className="eyebrow">OUR VISION</span>
+            <h2 className="eyebrow">OUR VISION</h2>
             <p className="about-statement">{visionStatement}</p>
           </div>
           <div>
-            <span className="eyebrow">OUR MISSION</span>
+            <h2 className="eyebrow">OUR MISSION</h2>
             <p className="about-statement">{missionStatement}</p>
-            <h4 className="about-list-label">We aim to:</h4>
+            <h3 className="about-list-label">We aim to:</h3>
             <ItemList items={missionAims} />
           </div>
         </div>

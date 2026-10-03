@@ -1802,8 +1802,11 @@ blockquote {
   display: flex;
   flex-direction: column;
 }
-.about-service h3 {
-  margin-bottom: 6px;
+.about-service h4 {
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 6px;
 }
 .about-tagline {
   color: var(--teal);
@@ -1814,7 +1817,7 @@ blockquote {
 .about-service > p {
   font-size: 15px;
 }
-.about-service h4,
+.about-service h5,
 .about-list-label {
   font-size: 14px;
   font-weight: 700;

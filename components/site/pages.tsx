@@ -11,7 +11,6 @@ import {
   CalendarDays,
 } from 'lucide-react';
 import { Home } from './home';
-import { AboutPage } from './about';
 import {
   SectionTitle,
   ServiceCard,
@@ -35,7 +34,7 @@ import { researchCollaboration } from '@/src/data/team';
 import { contact } from '@/src/data/contact';
 import { pageInfo } from '@/src/data/pages';
 import { patientFAQs, testimonials, news, jobs } from '@/src/data/editorial';
-function Intro({ path }: { path: string }) {
+export function Intro({ path }: { path: string }) {
   const info = pageInfo(path);
   return (
     <section className="page-intro tinted">
@@ -88,7 +87,6 @@ export function SitePage({ path }: { path: string }) {
   return (
     <>
       <Intro path={path} />
-      {path === 'about' && <AboutPage />}
       {path === 'specialities' && (
         <section className="section wrap">
           <div className="grid four">
