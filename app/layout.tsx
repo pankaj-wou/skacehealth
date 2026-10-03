@@ -4,7 +4,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'SKACE Healthtech | Expert care. Connected by possibility.',
   description:
-    'SKACE Healthtech Pvt Ltd — Ace Group of Hospitals. Superspeciality hospitals in Kalyan and Diva, satellite hospitals, micro clinics and specialist care.',
+    'SKACE Healthtech Pvt Ltd — Ace Group of Hospitals. Superspeciality hospitals in Kalyan West and Diva, satellite general hospitals, micro clinics and specialist care.',
   openGraph: {
     title: 'SKACE Healthtech',
     description: 'Expert care. Connected by possibility.',
@@ -18,10 +18,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="demo-banner">
-          Client preview · Company-supplied profiles with illustrative imagery.
-          Booking and contact forms are demonstrations.
-        </div>
         <Header />
         <main id="main">{children}</main>
         <Footer />

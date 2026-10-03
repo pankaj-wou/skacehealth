@@ -1,11 +1,13 @@
-// About Us content. Source: client-supplied About Us copy (October 2026).
-// Copy-edited for grammar and consistency only; planned services, facilities
-// and technologies keep their "aims to", "is developing" and "envisioned" wording.
+// About Us content. Source: client-supplied About Us copy (October 2026),
+// updated with the client's confirmed network figures, six service
+// departments and founders (3 October 2026). Copy-edited for grammar and
+// consistency only; planned technologies keep their "aims to" wording.
 
 export const aboutSections = [
   ['who-we-are', 'Who we are'],
+  ['founders', 'Our founders'],
   ['healthcare-model', 'Our healthcare model'],
-  ['services', 'Super-speciality services'],
+  ['services', 'Service departments'],
   ['preventive-care', 'Preventive care'],
   ['technology', 'AI & connected healthcare'],
   ['vision-mission', 'Vision & mission'],
@@ -14,9 +16,9 @@ export const aboutSections = [
 ] as const;
 
 export const aboutIntro = [
-  'SKACE Healthtech Pvt. Ltd. is building a new generation of integrated healthcare services, with a mission to make quality super-speciality care cost-effective, accessible and hassle-free for every section of society.',
-  'Our healthcare journey began in 2009 with a commitment to bring dependable medical care closer to communities. Today, we are expanding that vision through an integrated network of super-speciality hospitals, satellite hospitals and micro clinics, supported by modern medical infrastructure and emerging healthcare technologies.',
-  'Our clinical focus is centred on high-demand super-speciality services, including cancer care, cardiac sciences, neurosciences, orthopaedics and joint replacement, paediatric and neonatal care, and advanced critical care, supported by ICCU, NICU and PICU services.',
+  'SKACE Healthtech Pvt. Ltd. is building a new generation of integrated healthcare services, with a mission to make quality superspeciality care cost-effective, accessible and hassle-free for every section of society.',
+  'Our healthcare journey began in 2009 with a commitment to bring dependable medical care closer to communities. Today, we are expanding that vision through an integrated network of superspeciality hospitals, satellite hospitals and micro clinics, supported by modern medical infrastructure and emerging healthcare technologies.',
+  'Our clinical focus is centred on high-demand superspeciality services, including cancer care, cardiac sciences, neurosciences, orthopaedics and joint replacement, paediatric and neonatal care, and advanced critical care, supported by ICCU, NICU and PICU services.',
   'Beyond treating illness, SKACE Health is working towards a healthcare model focused on the early identification of health risks, prevention of chronic diseases, continuous monitoring and timely clinical intervention.',
   'Through the responsible adoption of Artificial Intelligence (AI), the Internet of Things (IoT), connected healthcare systems, data analytics and immersive technologies such as Virtual Reality (VR), we aim to make healthcare more proactive, connected and accessible, particularly for people in Tier II and Tier III cities.',
 ];
@@ -25,29 +27,29 @@ export const vision = 'Advanced healthcare should not be limited by geography.';
 
 export const careModel = [
   {
-    label: 'The hub',
-    name: 'Hub Super-Speciality Hospital',
-    capacity: '50–100 beds',
-    text: 'The primary centre for advanced diagnostics, specialised medical and surgical care, critical care and multidisciplinary treatment.',
+    label: 'The hubs',
+    name: 'Superspeciality Hospitals',
+    capacity: '2 hospitals · 50 beds each · Kalyan West and Diva',
+    text: 'The primary centres for advanced diagnostics, specialised medical and surgical care, critical care and multidisciplinary treatment.',
   },
   {
     label: 'The spokes',
-    name: 'Satellite Hospitals',
-    capacity: 'At least five per hub · 25–35 beds each',
-    text: 'Connected to each hub, providing secondary care, specialist consultations, diagnostics, minor procedures, emergency stabilisation and coordinated referrals.',
+    name: 'Satellite General Hospitals',
+    capacity: '5 hospitals · 25–35 beds each',
+    text: 'Located in Ambernath, Kalyan East, Titwala, Ambivli and Murbad, and connected to the hubs, providing secondary care, specialist consultations, diagnostics, minor procedures, emergency stabilisation and coordinated referrals.',
   },
   {
     label: 'Community access',
     name: 'Micro Clinics',
-    capacity: 'Approximately 10 within a 30–40 km radius of each hub',
+    capacity: '10 micro clinics',
     text: 'Convenient community-level access for consultations, preventive screening, follow-up care, chronic-disease management and technology-enabled health monitoring.',
   },
 ];
 
 export const carePathway = [
   'Micro Clinic',
-  'Satellite Hospital',
-  'Super-Speciality Hub',
+  'Satellite General Hospital',
+  'Superspeciality Hospital',
   'Recovery & Continuous Care',
 ];
 
@@ -64,55 +66,33 @@ export type AboutService = {
   slug?: string;
 };
 
+// The six service departments, in the order the client lists them.
 export const coreServices: AboutService[] = [
   {
-    id: 'cardiac-sciences',
-    name: 'Cardiac Sciences',
-    tagline: 'Comprehensive heart care',
+    id: 'orthopaedics',
+    name: 'Orthopaedics, Joint Replacement & Sports Injury Care',
+    tagline: 'Restoring mobility. Rebuilding independence.',
     intro:
-      'Our Cardiac Sciences programme focuses on the prevention, diagnosis and management of cardiovascular diseases through integrated cardiology and cardiac surgical services.',
-    listLabel: 'Areas of care include',
+      'Our Orthopaedics programme focuses on restoring mobility, reducing pain and helping patients return to active living.',
+    listLabel: 'Services include',
     items: [
-      'Cardiology consultations',
-      'Preventive cardiac screening',
-      'Non-invasive cardiology',
-      'Interventional cardiology',
-      'Coronary artery disease management',
-      'Heart rhythm disorders',
-      'Hypertension management',
-      'Heart failure management',
-      'Cardiothoracic and vascular surgical care',
-      'Post-cardiac surgery monitoring',
-      'Cardiac rehabilitation',
-      'Cardiac critical care',
-      'ICCU-supported cardiac management',
+      'General orthopaedics',
+      'Joint replacement',
+      'Knee and hip care',
+      'Arthritis management',
+      'Arthroscopy',
+      'Sports injuries',
+      'Ligament and tendon injuries',
+      'Fracture management',
+      'Trauma orthopaedics',
+      'Spine disorders',
+      'Musculoskeletal rehabilitation',
+      'Physiotherapy',
+      'Post-operative rehabilitation',
+      'Osteoporosis and bone-health management',
     ],
-    note: 'The objective is to provide coordinated care, from early identification of cardiac risk to advanced intervention and rehabilitation.',
-    slug: 'cardiac-care',
-  },
-  {
-    id: 'cancer-care',
-    name: 'Cancer Care & Oncology',
-    tagline: 'Multidisciplinary cancer care',
-    intro:
-      'Our Oncology programme focuses on coordinated, compassionate care across the cancer journey, from screening and diagnosis to treatment, recovery and surveillance.',
-    listLabel: 'Services are structured around',
-    items: [
-      'Cancer screening and early detection',
-      'Medical oncology',
-      'Surgical oncology',
-      'Chemotherapy',
-      'Cancer diagnostics',
-      'Tumour assessment',
-      'Multidisciplinary treatment planning',
-      'Pain and symptom management',
-      'Supportive and palliative care',
-      'Nutrition support',
-      'Post-treatment follow-up',
-      'Cancer survivorship monitoring',
-    ],
-    note: 'Our approach emphasises early detection, personalised treatment planning and coordinated multidisciplinary care.',
-    slug: 'cancer-care',
+    note: 'Treatment pathways are designed to combine clinical assessment, surgical and non-surgical management, and structured rehabilitation.',
+    slug: 'orthopaedics',
   },
   {
     id: 'neurosciences',
@@ -140,30 +120,53 @@ export const coreServices: AboutService[] = [
     slug: 'neuro-care',
   },
   {
-    id: 'orthopaedics',
-    name: 'Orthopaedics, Joint Replacement & Sports Injury Care',
-    tagline: 'Restoring mobility. Rebuilding independence.',
+    id: 'cancer-care',
+    name: 'Cancer Care & Oncology',
+    tagline: 'Multidisciplinary cancer care',
     intro:
-      'Our Orthopaedics programme focuses on restoring mobility, reducing pain and helping patients return to active living.',
-    listLabel: 'Services include',
+      'Our Oncology programme focuses on coordinated, compassionate care across the cancer journey, from screening and diagnosis to treatment, recovery and surveillance.',
+    listLabel: 'Services are structured around',
     items: [
-      'General orthopaedics',
-      'Joint replacement',
-      'Knee and hip care',
-      'Arthritis management',
-      'Arthroscopy',
-      'Sports injuries',
-      'Ligament and tendon injuries',
-      'Fracture management',
-      'Trauma orthopaedics',
-      'Spine disorders',
-      'Musculoskeletal rehabilitation',
-      'Physiotherapy',
-      'Post-operative rehabilitation',
-      'Osteoporosis and bone-health management',
+      'Cancer screening and early detection',
+      'Medical oncology',
+      'Surgical oncology',
+      'Chemotherapy',
+      'Cancer diagnostics',
+      'Tumour assessment',
+      'Multidisciplinary treatment planning',
+      'Pain and symptom management',
+      'Supportive and palliative care',
+      'Nutrition support',
+      'Post-treatment follow-up',
+      'Cancer survivorship monitoring',
     ],
-    note: 'Treatment pathways are designed to combine clinical assessment, surgical and non-surgical management, and structured rehabilitation.',
-    slug: 'orthopaedics',
+    note: 'Our approach emphasises early detection, personalised treatment planning and coordinated multidisciplinary care.',
+    slug: 'cancer-care',
+  },
+  {
+    id: 'cardiac-sciences',
+    name: 'Cardiac Sciences',
+    tagline: 'Comprehensive heart care',
+    intro:
+      'Our Cardiac Sciences programme focuses on the prevention, diagnosis and management of cardiovascular diseases through integrated cardiology and cardiac surgical services.',
+    listLabel: 'Areas of care include',
+    items: [
+      'Cardiology consultations',
+      'Preventive cardiac screening',
+      'Non-invasive cardiology',
+      'Interventional cardiology',
+      'Coronary artery disease management',
+      'Heart rhythm disorders',
+      'Hypertension management',
+      'Heart failure management',
+      'Cardiothoracic and vascular surgical care',
+      'Post-cardiac surgery monitoring',
+      'Cardiac rehabilitation',
+      'Cardiac critical care',
+      'ICCU-supported cardiac management',
+    ],
+    note: 'The objective is to provide coordinated care, from early identification of cardiac risk to advanced intervention and rehabilitation.',
+    slug: 'cardiac-care',
   },
   {
     id: 'paediatrics',
@@ -207,6 +210,35 @@ export const coreServices: AboutService[] = [
     slug: 'paediatric-care',
   },
   {
+    id: 'general-surgery',
+    name: 'General Surgery',
+    tagline:
+      'Including appendix, hernia, gallbladder stone and urology procedures',
+    intro:
+      'Our surgical services focus on safe, evidence-based treatment supported by appropriate diagnostics, anaesthesia and post-operative care.',
+    listLabel: 'Areas include',
+    items: [
+      'General surgery',
+      'Laparoscopic surgery',
+      'Appendix surgery',
+      'Hernia surgery',
+      'Gallbladder (GB) stone surgery',
+      'Gastrointestinal surgery',
+      'Urological surgical care',
+      'Kidney stone management',
+      'Prostate and bladder conditions',
+      'Urinary tract disorders',
+      'Minor and major surgical procedures',
+      'Post-operative monitoring',
+      'Surgical rehabilitation and follow-up',
+    ],
+    slug: 'general-surgery',
+  },
+];
+
+// Supporting clinical services from the supplied About copy.
+export const additionalServices: AboutService[] = [
+  {
     id: 'critical-care',
     name: 'Critical Care & Intensive Care',
     tagline: 'Advanced care when every moment matters',
@@ -228,82 +260,6 @@ export const coreServices: AboutService[] = [
     ],
     note: 'Our objective is to maintain continuity from emergency stabilisation and intensive care through to recovery and follow-up.',
     slug: 'critical-care',
-  },
-];
-
-export const additionalServices: AboutService[] = [
-  {
-    id: 'gastroenterology',
-    name: 'Gastroenterology & Digestive Sciences',
-    intro:
-      'Our Digestive Sciences services focus on conditions affecting the digestive system, liver, pancreas and gastrointestinal tract.',
-    listLabel: 'Areas of care include',
-    items: [
-      'Gastroenterology',
-      'Digestive disorders',
-      'Liver disorders',
-      'Pancreatic disorders',
-      'Gastrointestinal diagnostics',
-      'Endoscopy',
-      'Hepatology',
-      'Gastrointestinal surgery',
-      'Minimally invasive GI procedures',
-      'Nutrition-related gastrointestinal management',
-    ],
-    slug: 'gastroenterology',
-  },
-  {
-    id: 'nephrology',
-    name: 'Nephrology & Kidney Care',
-    intro:
-      'Our Nephrology services focus on the prevention, diagnosis and management of kidney-related diseases.',
-    listLabel: 'Services include',
-    items: [
-      'Kidney disease evaluation',
-      'Chronic kidney disease management',
-      'Acute kidney injury management',
-      'Hypertension-related kidney disease',
-      'Diabetic kidney disease',
-      'Electrolyte disorders',
-      'Dialysis support',
-      'Preventive kidney-health assessment',
-    ],
-    slug: 'nephrology',
-  },
-  {
-    id: 'urology',
-    name: 'Urology',
-    intro:
-      'Our Urology programme provides evaluation and management of diseases affecting the urinary system and the male reproductive system.',
-    listLabel: 'Areas of care include',
-    items: [
-      'Kidney stone management',
-      'Urinary tract disorders',
-      'Prostate disorders',
-      'Bladder conditions',
-      'Urological infections',
-      'Male urological health',
-      'Urological surgical care',
-    ],
-    slug: 'urology',
-  },
-  {
-    id: 'general-surgery',
-    name: 'General & Minimal Access Surgery',
-    intro:
-      'Our surgical services focus on safe, evidence-based treatment supported by appropriate diagnostics, anaesthesia and post-operative care.',
-    listLabel: 'Areas include',
-    items: [
-      'General surgery',
-      'Laparoscopic surgery',
-      'Hernia surgery',
-      'Gallbladder surgery',
-      'Gastrointestinal surgery',
-      'Minor and major surgical procedures',
-      'Post-operative monitoring',
-      'Surgical rehabilitation and follow-up',
-    ],
-    slug: 'general-surgery',
   },
   {
     id: 'emergency',
@@ -342,6 +298,44 @@ export const additionalServices: AboutService[] = [
       'Long-term clinical monitoring',
     ],
     slug: 'general-medicine',
+  },
+  {
+    id: 'gastroenterology',
+    name: 'Gastroenterology & Digestive Sciences',
+    intro:
+      'Our Digestive Sciences services focus on conditions affecting the digestive system, liver, pancreas and gastrointestinal tract.',
+    listLabel: 'Areas of care include',
+    items: [
+      'Gastroenterology',
+      'Digestive disorders',
+      'Liver disorders',
+      'Pancreatic disorders',
+      'Gastrointestinal diagnostics',
+      'Endoscopy',
+      'Hepatology',
+      'Gastrointestinal surgery',
+      'Minimally invasive GI procedures',
+      'Nutrition-related gastrointestinal management',
+    ],
+    slug: 'gastroenterology',
+  },
+  {
+    id: 'nephrology',
+    name: 'Nephrology & Kidney Care',
+    intro:
+      'Our Nephrology services focus on the prevention, diagnosis and management of kidney-related diseases.',
+    listLabel: 'Services include',
+    items: [
+      'Kidney disease evaluation',
+      'Chronic kidney disease management',
+      'Acute kidney injury management',
+      'Hypertension-related kidney disease',
+      'Diabetic kidney disease',
+      'Electrolyte disorders',
+      'Dialysis support',
+      'Preventive kidney-health assessment',
+    ],
+    slug: 'nephrology',
   },
 ];
 
@@ -412,13 +406,13 @@ export const technologyAreas = [
 ];
 
 export const visionStatement =
-  'To build an accessible and trusted network of technology-enabled super-speciality healthcare facilities that brings advanced medical expertise closer to communities across India.';
+  'To build an accessible and trusted network of technology-enabled superspeciality healthcare facilities that brings advanced medical expertise closer to communities across India.';
 
 export const missionStatement =
-  'To provide cost-effective, accessible and hassle-free healthcare for all sections of society by integrating clinical expertise, super-speciality hospitals, community healthcare infrastructure, preventive medicine and responsible healthcare technology.';
+  'To provide cost-effective, accessible and hassle-free healthcare for all sections of society by integrating clinical expertise, superspeciality hospitals, community healthcare infrastructure, preventive medicine and responsible healthcare technology.';
 
 export const missionAims = [
-  'Expand access to high-quality super-speciality healthcare.',
+  'Expand access to high-quality superspeciality healthcare.',
   'Establish an integrated hub & spoke hospital network.',
   'Strengthen healthcare availability in Tier II and Tier III cities.',
   'Promote preventive and early-intervention healthcare.',

@@ -58,10 +58,16 @@ const records = [
   ],
   [
     'general-surgery',
-    'General & Laparoscopic Surgery',
+    'General Surgery',
     'stethoscope',
-    'General and laparoscopic surgery with experienced surgical specialists.',
-    ['General surgery', 'Laparoscopic surgery'],
+    'General and laparoscopic surgery, including appendix, hernia, gallbladder (GB) stone and urology procedures.',
+    [
+      'Appendix surgery',
+      'Hernia surgery',
+      'Gallbladder (GB) stone surgery',
+      'Urology procedures',
+      'Laparoscopic surgery',
+    ],
     6,
   ],
   [
@@ -154,3 +160,19 @@ export const services = records.map(
   }),
 );
 export type Service = (typeof services)[number];
+// Service departments, in the order the client lists them. Other
+// specialities remain for the doctor panel.
+const departmentSlugs = [
+  'orthopaedics',
+  'neuro-care',
+  'cancer-care',
+  'cardiac-care',
+  'paediatric-care',
+  'general-surgery',
+];
+export const departments = departmentSlugs.map((slug) =>
+  services.find((s) => s.slug === slug)!,
+);
+export const otherServices = services.filter(
+  (s) => !departmentSlugs.includes(s.slug),
+);

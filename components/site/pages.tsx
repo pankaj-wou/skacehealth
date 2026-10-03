@@ -27,7 +27,7 @@ import {
 import { DoctorFinder, DoctorCard } from './doctors';
 import { AppointmentForm, ContactForm } from './forms';
 import { company } from '@/src/data/company';
-import { services } from '@/src/data/services';
+import { services, departments, otherServices } from '@/src/data/services';
 import { hospitals } from '@/src/data/hospitals';
 import { doctors, matchesSpeciality } from '@/src/data/doctors';
 import { researchCollaboration } from '@/src/data/team';
@@ -88,13 +88,32 @@ export function SitePage({ path }: { path: string }) {
     <>
       <Intro path={path} />
       {path === 'specialities' && (
-        <section className="section wrap">
-          <div className="grid four">
-            {services.map((s) => (
-              <ServiceCard service={s} key={s.slug} />
-            ))}
-          </div>
-        </section>
+        <>
+          <section className="section wrap">
+            <SectionTitle
+              eyebrow="OUR SERVICE DEPARTMENTS"
+              title="Six departments at the centre of our care"
+            />
+            <div className="grid three">
+              {departments.map((s) => (
+                <ServiceCard service={s} key={s.slug} />
+              ))}
+            </div>
+          </section>
+          <section className="tinted">
+            <div className="section wrap">
+              <SectionTitle
+                eyebrow="ALSO ON OUR DOCTOR PANEL"
+                title="Other specialities"
+              />
+              <div className="grid four">
+                {otherServices.map((s) => (
+                  <ServiceCard service={s} key={s.slug} />
+                ))}
+              </div>
+            </div>
+          </section>
+        </>
       )}
       {service && (
         <>
@@ -192,7 +211,7 @@ export function SitePage({ path }: { path: string }) {
             </p>
             <div className="grid three">
               {hospitals
-                .filter((h) => h.type === 'Hub')
+                .filter((h) => h.type === 'Superspeciality Hospital')
                 .map((h) => (
                   <HospitalCard hospital={h} key={h.slug} />
                 ))}
@@ -274,21 +293,22 @@ export function SitePage({ path }: { path: string }) {
                 community connections.
               </h2>
               <p className="lead">
-                Two 50-bed superspeciality hospitals. Five satellite hospitals.
-                Sixteen micro clinic locations.
+                Two 50-bed superspeciality hospitals. Five satellite general
+                hospitals. Ten micro clinics.
               </p>
               <p>
-                The group’s network extends from Kalyan and Diva to community
-                locations including Ambernath, Ambivli, Titwala, Badlapur,
-                Murbad and surrounding areas.
+                Superspeciality hospitals in Kalyan West and Diva act as hubs.
+                Satellite general hospitals in Ambernath, Kalyan East, Titwala,
+                Ambivli and Murbad, and 10 micro clinics, bring care closer to
+                surrounding communities.
               </p>
               <div className="map-schematic">
                 <MapPin />
                 <h3>Maharashtra healthcare network</h3>
-                <p>Kalyan ↔ Diva</p>
+                <p>Superspeciality hubs: Kalyan West ↔ Diva</p>
                 <p>
-                  Satellite hospitals: Kalyan East, Ambernath East, Ambernath
-                  West, Ambivli and Titwala.
+                  Satellite general hospitals: Ambernath, Kalyan East, Titwala,
+                  Ambivli and Murbad.
                 </p>
                 <small>
                   Location overview · detailed addresses and directions to
@@ -299,9 +319,11 @@ export function SitePage({ path }: { path: string }) {
             <HubSpokeDiagram />
           </section>
           {[
-            ['Hub', 'Superspeciality hospitals'],
-            ['Spoke', 'Satellite hospitals'],
-            ['Community access', 'Micro clinic locations'],
+            ['Superspeciality Hospital', 'Superspeciality hospitals (hubs)'],
+            [
+              'Satellite General Hospital',
+              'Satellite general hospitals (spokes)',
+            ],
           ].map(([type, title]) => (
             <section className="section wrap" key={type}>
               <SectionTitle eyebrow="EXPLORE THE NETWORK" title={title} />
@@ -314,6 +336,19 @@ export function SitePage({ path }: { path: string }) {
               </div>
             </section>
           ))}
+          <section className="section wrap">
+            <SectionTitle eyebrow="COMMUNITY ACCESS" title="10 micro clinics" />
+            <article className="info-card">
+              <MapPin />
+              <p>
+                Our 10 micro clinics offer community-level access for
+                consultations, preventive screening, follow-up care and
+                chronic-disease management, with referral to our satellite and
+                superspeciality hospitals. Individual clinic locations will be
+                published here soon.
+              </p>
+            </article>
+          </section>
         </>
       )}
       {hospital && (
@@ -432,7 +467,7 @@ export function SitePage({ path }: { path: string }) {
                 technology.
               </p>
               <p>
-                This research is led by Dr. Kuldeep Mahajan, with Mr. Sandeep
+                This research is led by Dr. Kuldeep Mahajan, with Dr. Sandeep
                 Mahajan and the research team. It is not an available diagnostic
                 tool on this website.
               </p>
@@ -504,7 +539,7 @@ export function SitePage({ path }: { path: string }) {
             />
             <p className="lead">
               Dr. Kuldeep Mahajan brings 18 years of critical-care experience.
-              Mr. Sandeep Mahajan brings 11 years in hospital operations and
+              Dr. Sandeep Mahajan brings 11 years in hospital operations and
               management. The Step Down ICU at Home concept was launched in 2016
               using cloud-based monitoring.
             </p>

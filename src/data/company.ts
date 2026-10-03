@@ -4,14 +4,14 @@ export const company = {
   groupName: 'Ace Group of Hospitals',
   tagline: 'Expert care. Connected by possibility.',
   intro:
-    'SKACE Healthtech Pvt Ltd brings together Ace Group of Hospitals: two 50-bed superspeciality hospitals in Kalyan and Diva, five satellite hospitals and a network of micro clinics. The group combines specialist healthcare with cloud-based monitoring experience and ongoing research in AI-enabled preventive healthcare.',
+    'SKACE Healthtech Pvt Ltd brings together Ace Group of Hospitals: two 50-bed superspeciality hospitals in Kalyan West and Diva, five satellite general hospitals and 10 micro clinics. The group combines specialist healthcare with cloud-based monitoring experience and ongoing research in AI-enabled preventive healthcare.',
   stats: [
-    { value: '100', label: 'Superspeciality beds' },
+    { value: '100+', label: 'Superspeciality beds' },
     { value: '2', label: 'Superspeciality hospitals' },
-    { value: '5', label: 'Satellite hospitals' },
+    { value: '5', label: 'Satellite general hospitals' },
     { value: '30', label: 'Panel doctors' },
     { value: '2016', label: 'ICU at Home concept launched' },
-    { value: '16', label: 'Micro clinic locations' },
+    { value: '10', label: 'Micro clinics' },
   ],
   heroImage: '/images/hospitals/care-team.webp',
   disclaimer:

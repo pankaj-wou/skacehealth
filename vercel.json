@@ -5,5 +5,22 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist/client",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/network/micro-clinic-(.*)",
+      "destination": "/network",
+      "permanent": true
+    },
+    {
+      "source": "/network/satellite-ambernath-east",
+      "destination": "/network/satellite-ambernath",
+      "permanent": true
+    },
+    {
+      "source": "/network/satellite-ambernath-west",
+      "destination": "/network/satellite-ambernath",
+      "permanent": true
+    }
+  ]
 }

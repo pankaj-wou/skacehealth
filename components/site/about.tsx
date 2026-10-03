@@ -4,13 +4,13 @@ import {
   Building2,
   Network,
   MapPin,
-  HeartPulse,
   Check,
   Cpu,
   Wifi,
   Glasses,
 } from 'lucide-react';
 import { SectionTitle } from './shared';
+import { team } from '@/src/data/team';
 import {
   aboutSections,
   aboutIntro,
@@ -95,7 +95,13 @@ export default function AboutPage() {
           ))}
         </div>
         <aside className="about-vision">
-          <HeartPulse size={30} />
+          <img
+            className="about-logo"
+            src="/images/brand/skace-logo.webp"
+            alt="SKACE Healthtech Pvt Ltd — Innovate · Connect · Care"
+            width={220}
+            height={208}
+          />
           <span className="eyebrow">OUR VISION IS SIMPLE</span>
           <p>{vision}</p>
           <div className="actions">
@@ -109,19 +115,38 @@ export default function AboutPage() {
         </aside>
       </section>
 
+      <section className="about-anchor about-founders-section" id="founders">
+        <div className="section wrap">
+          <SectionTitle
+            eyebrow="OUR FOUNDERS"
+            title="The people behind SKACE Health"
+            link="Read full profiles"
+            href="/leadership"
+          />
+          <div className="about-founders">
+            {team.map((t) => (
+              <article key={t.name}>
+                <img src={t.image} alt={t.name} width={160} height={160} />
+                <h3>{t.name}</h3>
+                <p>{t.role}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="tinted about-anchor" id="healthcare-model">
         <div className="section wrap">
           <SectionTitle
             eyebrow="OUR HEALTHCARE MODEL"
-            title="A hub & spoke super-speciality healthcare network"
+            title="A hub & spoke superspeciality healthcare network"
             link="Explore our network"
             href="/network"
           />
           <p className="about-section-intro">
-            SKACE Health is developing an integrated hub & spoke healthcare
-            model designed to extend advanced medical services beyond major
-            metropolitan centres. Each healthcare cluster is envisioned around
-            three connected levels of care.
+            SKACE Health’s integrated hub & spoke healthcare model is designed
+            to extend advanced medical services beyond major metropolitan
+            centres. Our network connects three levels of care.
           </p>
           <div className="grid three">
             {careModel.map((m, i) => {
@@ -156,7 +181,7 @@ export default function AboutPage() {
 
       <section className="section wrap about-anchor" id="services">
         <SectionTitle
-          eyebrow="OUR SUPER-SPECIALITY SERVICES"
+          eyebrow="OUR SERVICE DEPARTMENTS"
           title="Comprehensive expertise. Coordinated care."
           link="View all specialities"
           href="/specialities"
@@ -164,7 +189,7 @@ export default function AboutPage() {
         <p className="about-section-intro">
           SKACE Health is developing a multidisciplinary clinical ecosystem
           focused on some of the most critical areas of modern healthcare. Our
-          super-speciality services are designed around coordinated clinical
+          superspeciality services are designed around coordinated clinical
           pathways, specialist expertise, advanced diagnostics, surgical
           intervention, intensive care and long-term follow-up.
         </p>
@@ -177,7 +202,7 @@ export default function AboutPage() {
         </nav>
         <section aria-labelledby="core-programmes">
           <h3 className="about-group-title" id="core-programmes">
-            Core super-speciality programmes
+            Our six service departments
           </h3>
           <div className="about-services">
             {coreServices.map((s) => (
@@ -187,7 +212,7 @@ export default function AboutPage() {
         </section>
         <section aria-labelledby="further-specialities">
           <h3 className="about-group-title" id="further-specialities">
-            Further specialities and clinical services
+            Supporting clinical services
           </h3>
           <div className="about-services">
             {additionalServices.map((s) => (
@@ -286,7 +311,7 @@ export default function AboutPage() {
             <h2>Advanced care. Closer to you.</h2>
             <p className="lead">
               From a micro clinic in the community to a satellite hospital and
-              an advanced super-speciality hub, SKACE Health is creating a
+              an advanced superspeciality hub, SKACE Health is creating a
               connected network designed around each patient’s complete
               healthcare journey.
             </p>

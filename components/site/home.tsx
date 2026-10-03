@@ -7,7 +7,7 @@ import {
   ShieldCheck,
 } from 'lucide-react';
 import { company } from '@/src/data/company';
-import { services } from '@/src/data/services';
+import { departments } from '@/src/data/services';
 import { hospitals } from '@/src/data/hospitals';
 import {
   SectionTitle,
@@ -49,7 +49,7 @@ export function Home() {
             </a>
           </div>
           <div className="hero-note">
-            <ShieldCheck size={20} /> Superspeciality care in Kalyan & Diva
+            <ShieldCheck size={20} /> Superspeciality care in Kalyan West & Diva
           </div>
         </div>
         <div className="hero-visual">
@@ -85,13 +85,13 @@ export function Home() {
       </section>
       <section className="section wrap">
         <SectionTitle
-          eyebrow="CARE WITHOUT COMPROMISE"
+          eyebrow="OUR SERVICE DEPARTMENTS"
           title="Specialist expertise. A personal approach."
           link="Explore all specialities"
           href="/specialities"
         />
-        <div className="grid four">
-          {services.map((s) => (
+        <div className="grid three">
+          {departments.map((s) => (
             <ServiceCard service={s} key={s.slug} />
           ))}
         </div>

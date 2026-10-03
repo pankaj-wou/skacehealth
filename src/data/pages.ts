@@ -10,7 +10,7 @@ export const pages: Record<
     breadcrumb: 'About Us',
     title: 'Healthcare that is accessible, advanced and connected',
     description:
-      'SKACE Healthtech is building integrated super-speciality healthcare services to make quality care cost-effective, accessible and hassle-free for every section of society.',
+      'SKACE Healthtech is building integrated superspeciality healthcare services to make quality care cost-effective, accessible and hassle-free for every section of society.',
   },
   network: {
     title: 'Closer to you. Connected for you.',

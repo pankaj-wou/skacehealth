@@ -41,18 +41,26 @@ import {
 import { navigation } from '@/src/data/navigation';
 import { company, careJourney, roadmap, pillars } from '@/src/data/company';
 import { contact, whatsappUrl } from '@/src/data/contact';
-import { services, type Service } from '@/src/data/services';
+import { services, departments, type Service } from '@/src/data/services';
 import { hospitals, type Hospital } from '@/src/data/hospitals';
 import { team, capabilities } from '@/src/data/team';
 export function Brand() {
   return (
     <a className="brand" href="/" aria-label="SKACE Healthtech home">
-      <span className="brand-mark" aria-hidden="true">
-        ✚
-      </span>
-      <span>
-        SKACE<small>HEALTHTECH</small>
-      </span>
+      <img
+        className="brand-mark"
+        src="/images/brand/skace-mark.webp"
+        alt=""
+        width={43}
+        height={48}
+      />
+      <img
+        className="brand-wordmark"
+        src="/images/brand/skace-wordmark.webp"
+        alt="SKACE Healthtech"
+        width={165}
+        height={40}
+      />
     </a>
   );
 }
@@ -162,7 +170,7 @@ export function Footer() {
           </div>
           <div>
             <h3>Specialities</h3>
-            {services.slice(0, 4).map((s) => (
+            {departments.map((s) => (
               <a href={`/specialities/${s.slug}`} key={s.slug}>
                 {s.name}
               </a>
@@ -172,7 +180,7 @@ export function Footer() {
           <div>
             <h3>Our network</h3>
             <a href="/network">Superspeciality hospitals</a>
-            <a href="/network">Satellite hospitals</a>
+            <a href="/network">Satellite general hospitals</a>
             <a href="/network">Micro clinics</a>
             <h3 className="footer-subhead">Patient services</h3>
             <a href="/book-appointment">Book Appointment</a>
@@ -314,7 +322,7 @@ export function HubSpokeDiagram() {
   return (
     <div
       className="network-diagram"
-      aria-label="2 superspeciality hospital hubs connect to 5 satellite hospital spokes, which connect to community micro clinics"
+      aria-label="2 superspeciality hospital hubs connect to 5 satellite general hospital spokes, which connect to 10 community micro clinics"
     >
       <div className="network-tier">
         <span className="diagram-icon">
@@ -323,7 +331,7 @@ export function HubSpokeDiagram() {
         <div>
           <span className="eyebrow">THE HUBS</span>
           <h3>2 Superspeciality Hospitals</h3>
-          <p>Kalyan & Diva · 50 beds each.</p>
+          <p>Kalyan West & Diva · 50 beds each.</p>
         </div>
       </div>
       <div className="connector">↓</div>
@@ -333,8 +341,11 @@ export function HubSpokeDiagram() {
         </span>
         <div>
           <span className="eyebrow">THE SPOKES</span>
-          <h3>5 Satellite Hospitals</h3>
-          <p>Kalyan East, Ambernath East & West, Ambivli and Titwala.</p>
+          <h3>5 Satellite General Hospitals</h3>
+          <p>
+            Ambernath, Kalyan East, Titwala, Ambivli and Murbad · 25–35 beds
+            each.
+          </p>
         </div>
       </div>
       <div className="connector">↓</div>
@@ -344,7 +355,7 @@ export function HubSpokeDiagram() {
         </span>
         <div>
           <span className="eyebrow">COMMUNITY ACCESS</span>
-          <h3>16 Micro Clinic Locations</h3>
+          <h3>10 Micro Clinics</h3>
           <p>A local connection to a wider network.</p>
         </div>
       </div>
@@ -454,7 +465,7 @@ export function TeamSection() {
       <div className="grid three leadership-grid">
         {team.map((t) => (
           <article className="team-card" key={t.name}>
-            <ProfileIdentity name={t.name} />
+            <ProfileIdentity name={t.name} image={t.image || undefined} />
             <div className="card-body">
               <span className="eyebrow">{t.role}</span>
               <h3>{t.name}</h3>
@@ -494,8 +505,19 @@ export function TechnologyTeam() {
     </div>
   );
 }
-export function ProfileIdentity({ name, image }: { name: string; image?: string }) {
-  if (image) return <div className="profile-photo"><img src={image} alt={name} loading="lazy" /></div>;
+export function ProfileIdentity({
+  name,
+  image,
+}: {
+  name: string;
+  image?: string;
+}) {
+  if (image)
+    return (
+      <div className="profile-photo">
+        <img src={image} alt={name} loading="lazy" />
+      </div>
+    );
   const initials = name
     .replace(/^(Dr\.|Mr\.)\s*/, '')
     .split(/\s+/)

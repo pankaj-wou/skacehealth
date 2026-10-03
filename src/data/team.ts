@@ -1,8 +1,17 @@
 export const team = [
   {
+    name: 'Dr. Sandeep Mahajan',
+    role: 'CEO & Co-founder',
+    image: '/images/team/sandeep-mahajan.jpg',
+    qualification:
+      'MS, Liverpool John Moores University, UK · Bachelor’s studies, Nagpur',
+    bio: 'Dr. Sandeep Mahajan has 11 years of experience in hospital operations, quality measures, human resource management and other aspects of hospital management. As CEO & Co-founder of Ace Hospital & Research Centre, he is interested in digitising hospital management and services through artificial intelligence, machine learning and the Internet of Things. Under Dr. Kuldeep Mahajan’s leadership, he is working on the proposed “Prediction of Chronic Diseases (Virtual Super Specialist Doctor)” preventive healthcare platform.',
+    achievements: [],
+  },
+  {
     name: 'Dr. Kuldeep Mahajan',
     role: 'Founder & MD',
-    image: '',
+    image: '/images/team/kuldeep-mahajan.jpg',
     qualification: 'IIM Ahmedabad alumnus · Senior Physician & Intensivist',
     bio: 'Dr. Kuldeep Mahajan has 18 years of critical-care experience. He established Ace Group of Hospitals and launched the Step Down ICU at Home concept in 2016 using cloud-based patient monitoring. His current work focuses on AI/ML research for prediction and early diagnosis of chronic diseases, preventive healthcare for communities, and accessible, cost-effective major surgery.',
     achievements: [
@@ -13,28 +22,20 @@ export const team = [
     ],
   },
   {
-    name: 'Mr. Sandeep Mahajan',
-    role: 'CEO & Co-founder',
-    image: '',
+    name: 'Dr. Hemachandran K',
+    role: 'Co-founder · Technology Team',
+    image: '/images/team/hemachandran-k.jpg',
     qualification:
-      'MS, Liverpool John Moores University, UK · Bachelor’s studies, Nagpur',
-    bio: 'Mr. Sandeep Mahajan has 11 years of experience in hospital operations, quality measures, human resource management and other aspects of hospital management. As CEO & Co-founder of Ace Hospital & Research Centre, he is interested in digitising hospital management and services through artificial intelligence, machine learning and the Internet of Things. Under Dr. Kuldeep Mahajan’s leadership, he is working on the proposed “Prediction of Chronic Diseases (Virtual Super Specialist Doctor)” preventive healthcare platform.',
+      'Artificial Intelligence · Machine Learning · Data Analytics',
+    bio: 'Dr. Hemachandran K works in applied artificial intelligence, machine learning and data analytics. His technical interests include predictive modelling, knowledge processing and the use of machine learning with IoT data. His work explores how analytical models support decision-making, alongside responsible AI practices and practical implementation of intelligent systems.',
     achievements: [],
   },
   {
-    name: 'Dr. Chandran K H',
+    name: 'Dr. Rajesh Kumar KV',
     role: 'Co-founder · Technology Team',
-    image: '',
-    qualification: 'Artificial Intelligence · Machine Learning · Data Analytics',
-    bio: 'Dr. Chandran K H works in applied artificial intelligence, machine learning and data analytics. His technical interests include predictive modelling, knowledge processing and the use of machine learning with IoT data. His work explores how analytical models support decision-making, alongside responsible AI practices and practical implementation of intelligent systems.',
-    achievements: [],
-  },
-  {
-    name: 'Dr. Kumar K V R',
-    role: 'Co-founder · Technology Team',
-    image: '',
+    image: '/images/team/rajesh-kumar-kv.jpg',
     qualification: 'Applied AI · Biomedical Analytics · IoT & Wearable Sensors',
-    bio: 'Dr. Kumar K V R specialises in applied artificial intelligence, machine learning and sensor-based analytics. His research includes wearable systems for tracking movement and musculoskeletal rehabilitation, combining inertial sensor measurements with statistical modelling and predictive algorithms. His technical work also spans IoT applications, industrial automation, conversational AI and data engineering.',
+    bio: 'Dr. Rajesh Kumar KV specialises in applied artificial intelligence, machine learning and sensor-based analytics. His research includes wearable systems for tracking movement and musculoskeletal rehabilitation, combining inertial sensor measurements with statistical modelling and predictive algorithms. His technical work also spans IoT applications, industrial automation, conversational AI and data engineering.',
     achievements: [],
   },
 ];
