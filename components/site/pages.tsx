@@ -442,21 +442,7 @@ export function SitePage({ path }: { path: string }) {
       )}
       {path === 'technology' && (
         <>
-          <section className="section wrap split">
-            <div>
-              <span className="eyebrow">PATIENT MONITORING</span>
-              <h2>Step Down ICU at Home.</h2>
-              <p className="lead">
-                A care concept launched in 2016 through cloud-based patient
-                monitoring.
-              </p>
-              <p>
-                Dr. Kuldeep Mahajan introduced Step Down ICU at Home as part of
-                the group’s healthcare work. That experience with patient
-                monitoring informs the current focus on connected services and
-                preventive healthcare.
-              </p>
-            </div>
+          <section className="section wrap narrow">
             <div className="info-card">
               <span className="eyebrow">RESEARCH IN DEVELOPMENT</span>
               <h2>Prediction of Chronic Diseases</h2>
@@ -540,8 +526,7 @@ export function SitePage({ path }: { path: string }) {
             <p className="lead">
               Dr. Kuldeep Mahajan brings 18 years of critical-care experience.
               Dr. Sandeep Mahajan brings 11 years in hospital operations and
-              management. The Step Down ICU at Home concept was launched in 2016
-              using cloud-based monitoring.
+              management.
             </p>
             <p>
               The chronic-disease prediction platform remains research in

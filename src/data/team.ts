@@ -13,7 +13,7 @@ export const team = [
     role: 'Founder & MD',
     image: '/images/team/kuldeep-mahajan.jpg',
     qualification: 'IIM Ahmedabad alumnus · Senior Physician & Intensivist',
-    bio: 'Dr. Kuldeep Mahajan has 18 years of critical-care experience. He established Ace Group of Hospitals and launched the Step Down ICU at Home concept in 2016 using cloud-based patient monitoring. His current work focuses on AI/ML research for prediction and early diagnosis of chronic diseases, preventive healthcare for communities, and accessible, cost-effective major surgery.',
+    bio: 'Dr. Kuldeep Mahajan has 18 years of critical-care experience. He established Ace Group of Hospitals. His current work focuses on AI/ML research for prediction and early diagnosis of chronic diseases, preventive healthcare for communities, and accessible, cost-effective major surgery.',
     achievements: [
       'Diva Ratna Puraskar — felicitated by Hon. Shri Praveen Darekar for work supporting underprivileged people in Diva.',
       'Aarogya Doot Puraskar — felicitated by Shiv Sena for work supporting underprivileged people in Diva during the COVID-19 pandemic.',

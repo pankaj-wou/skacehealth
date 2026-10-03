@@ -32,7 +32,7 @@ Forms validate locally and show demo confirmation. They do not transmit or persi
 - Contact & Social: contact form, six sample contact channels, addresses and labelled social channel examples.
 - Website Content: About, Patient Services, synthetic testimonials, Careers and News.
 - Photos & Media: generated hero, facility views and clinical scenes remain labelled illustrations. Generated portraits are no longer displayed against real names.
-- Investor & AI: source-derived network metrics, the 2016 ICU at Home milestone and chronic-disease prediction research.
+- Investor & AI: source-derived network metrics and chronic-disease prediction research.
 - Technical: this readme and hosting configuration. No credentials, accounts or actual service connections were fabricated.
 
 Before operational public use, review the synthetic content and replace contact information, profiles, schedules, addresses and policies with approved facts.

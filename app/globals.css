@@ -570,7 +570,7 @@ body {
   background: #e9eef6;
 }
 .stats {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 12px;
 }
 .stats > div {
