@@ -40,7 +40,7 @@ import {
 } from 'lucide-react';
 import { navigation } from '@/src/data/navigation';
 import { company, careJourney, roadmap, pillars } from '@/src/data/company';
-import { contact, whatsappUrl } from '@/src/data/contact';
+import { contact, whatsappUrl, telUrl } from '@/src/data/contact';
 import { services, departments, type Service } from '@/src/data/services';
 import { hospitals, type Hospital } from '@/src/data/hospitals';
 import { team, capabilities } from '@/src/data/team';
@@ -189,6 +189,10 @@ export function Footer() {
           <div>
             <h3>Get in touch</h3>
             <a href="/contact">Contact Us</a>
+            <a href={telUrl(contact.phone)}>{contact.phone}</a>
+            <a href={telUrl(contact.appointmentPhone)}>
+              {contact.appointmentPhone}
+            </a>
             <a href={whatsappUrl ?? '/contact#contact-details'}>WhatsApp</a>
             <a href="/contact?subject=investor">Investor enquiries</a>
             {contact.socialLinks.length ? (

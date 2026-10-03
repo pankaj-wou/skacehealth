@@ -31,7 +31,7 @@ import { services, departments, otherServices } from '@/src/data/services';
 import { hospitals } from '@/src/data/hospitals';
 import { doctors, matchesSpeciality } from '@/src/data/doctors';
 import { researchCollaboration } from '@/src/data/team';
-import { contact } from '@/src/data/contact';
+import { contact, telUrl } from '@/src/data/contact';
 import { pageInfo } from '@/src/data/pages';
 import { patientFAQs, testimonials, news, jobs } from '@/src/data/editorial';
 export function Intro({ path }: { path: string }) {
@@ -524,8 +524,8 @@ export function SitePage({ path }: { path: string }) {
               title="Building on clinical and operational experience"
             />
             <p className="lead">
-              Dr. Kuldeep Mahajan brings 18 years of critical-care experience.
-              Dr. Sandeep Mahajan brings 11 years in hospital operations and
+              Dr. Kuldeep Mahajan brings 20 years of critical-care experience.
+              Dr. Sandeep Mahajan brings 16 years in hospital operations and
               management.
             </p>
             <p>
@@ -579,21 +579,24 @@ export function SitePage({ path }: { path: string }) {
               <span className="eyebrow">WE’RE HERE TO CONNECT</span>
               <h2>A conversation is a good place to start.</h2>
               <p className="lead">
-                For the first version, all contact details below are
-                non-operational synthetic examples.
+                Call us on either number below. Our second number is also
+                available on WhatsApp.
               </p>
               <div className="contact-list">
                 {[
-                  ['General phone', contact.phone],
-                  ['Appointment helpline', contact.appointmentPhone],
-                  ['WhatsApp', '+91 00000 00102 · demo only'],
-                  ['General email', contact.email],
-                  ['Corporate enquiries', contact.corporateEmail],
-                  ['Investor enquiries', contact.investorEmail],
-                ].map(([t, v]) => (
+                  ['Phone', contact.phone, telUrl(contact.phone)],
+                  [
+                    'Phone & WhatsApp',
+                    contact.appointmentPhone,
+                    telUrl(contact.appointmentPhone),
+                  ],
+                  ['General email', contact.email + ' · sample'],
+                  ['Corporate enquiries', contact.corporateEmail + ' · sample'],
+                  ['Investor enquiries', contact.investorEmail + ' · sample'],
+                ].map(([t, v, href]) => (
                   <div key={t}>
                     <span>{t}</span>
-                    <strong>{v}</strong>
+                    <strong>{href ? <a href={href}>{v}</a> : v}</strong>
                   </div>
                 ))}
               </div>
@@ -654,7 +657,7 @@ export function SitePage({ path }: { path: string }) {
                 ],
                 [
                   'Emergency information',
-                  'This demonstration is not an emergency service. Its sample phone numbers and addresses do not connect to care.',
+                  'This website is not an emergency service. For appointments and enquiries, call +91 90762 29076 or +91 77770 08464.',
                 ],
               ].map(([t, d]) => (
                 <article className="info-card" key={t}>

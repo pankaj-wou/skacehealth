@@ -5,7 +5,7 @@ export const team = [
     image: '/images/team/sandeep-mahajan.jpg',
     qualification:
       'MS, Liverpool John Moores University, UK · Bachelor’s studies, Nagpur',
-    bio: 'Dr. Sandeep Mahajan has 11 years of experience in hospital operations, quality measures, human resource management and other aspects of hospital management. As CEO & Co-founder of Ace Hospital & Research Centre, he is interested in digitising hospital management and services through artificial intelligence, machine learning and the Internet of Things. Under Dr. Kuldeep Mahajan’s leadership, he is working on the proposed “Prediction of Chronic Diseases (Virtual Super Specialist Doctor)” preventive healthcare platform.',
+    bio: 'Dr. Sandeep Mahajan has 16 years of experience in hospital operations, quality measures, human resource management and other aspects of hospital management. As CEO & Co-founder of Ace Hospital & Research Centre, he is interested in digitising hospital management and services through artificial intelligence, machine learning and the Internet of Things. Under Dr. Kuldeep Mahajan’s leadership, he is working on the proposed “Prediction of Chronic Diseases (Virtual Super Specialist Doctor)” preventive healthcare platform.',
     achievements: [],
   },
   {
@@ -13,7 +13,7 @@ export const team = [
     role: 'Founder & MD',
     image: '/images/team/kuldeep-mahajan.jpg',
     qualification: 'IIM Ahmedabad alumnus · Senior Physician & Intensivist',
-    bio: 'Dr. Kuldeep Mahajan has 18 years of critical-care experience. He established Ace Group of Hospitals. His current work focuses on AI/ML research for prediction and early diagnosis of chronic diseases, preventive healthcare for communities, and accessible, cost-effective major surgery.',
+    bio: 'Dr. Kuldeep Mahajan has 20 years of critical-care experience. He established Ace Group of Hospitals. His current work focuses on AI/ML research for prediction and early diagnosis of chronic diseases, preventive healthcare for communities, and accessible, cost-effective major surgery.',
     achievements: [
       'Diva Ratna Puraskar — felicitated by Hon. Shri Praveen Darekar for work supporting underprivileged people in Diva.',
       'Aarogya Doot Puraskar — felicitated by Shiv Sena for work supporting underprivileged people in Diva during the COVID-19 pandemic.',

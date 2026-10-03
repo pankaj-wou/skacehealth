@@ -1,8 +1,10 @@
-// All contact values are deliberately non-operational synthetic examples.
+// Phone numbers are client-supplied. Email addresses and social links are
+// still non-operational placeholders.
 export const contact = {
-  phone: '+91 00000 00100',
-  appointmentPhone: '+91 00000 00101',
-  whatsappNumber: null as string | null,
+  phone: '+91 90762 29076',
+  // Also the WhatsApp number.
+  appointmentPhone: '+91 77770 08464',
+  whatsappNumber: '+91 77770 08464' as string | null,
   email: 'care@skace.example',
   corporateEmail: 'corporate@skace.example',
   investorEmail: 'investors@skace.example',
@@ -17,3 +19,4 @@ export const contact = {
 export const whatsappUrl = contact.whatsappNumber
   ? `https://wa.me/${contact.whatsappNumber.replace(/\D/g, '')}`
   : null;
+export const telUrl = (n: string) => `tel:${n.replace(/[^\d+]/g, '')}`;
