@@ -3,9 +3,9 @@ import { routePaths, pageInfo } from '@/src/data/pages';
 import { notFound } from 'next/navigation';
 export const dynamicParams = false;
 export function generateStaticParams() {
-  // About has its own server-rendered route in app/about.
+  // About and Specialities have their own server-rendered routes.
   return routePaths
-    .filter((p) => p && p !== 'about')
+    .filter((p) => p && p !== 'about' && p !== 'specialities')
     .map((p) => ({ slug: p.split('/') }));
 }
 export async function generateMetadata({

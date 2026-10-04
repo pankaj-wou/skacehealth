@@ -27,7 +27,7 @@ import {
 import { DoctorFinder, DoctorCard } from './doctors';
 import { AppointmentForm, ContactForm } from './forms';
 import { company } from '@/src/data/company';
-import { services, departments, otherServices } from '@/src/data/services';
+import { services } from '@/src/data/services';
 import { hospitals } from '@/src/data/hospitals';
 import { doctors, matchesSpeciality } from '@/src/data/doctors';
 import { researchCollaboration } from '@/src/data/team';
@@ -87,34 +87,6 @@ export function SitePage({ path }: { path: string }) {
   return (
     <>
       <Intro path={path} />
-      {path === 'specialities' && (
-        <>
-          <section className="section wrap">
-            <SectionTitle
-              eyebrow="OUR SERVICE DEPARTMENTS"
-              title="Six departments at the centre of our care"
-            />
-            <div className="grid three">
-              {departments.map((s) => (
-                <ServiceCard service={s} key={s.slug} />
-              ))}
-            </div>
-          </section>
-          <section className="tinted">
-            <div className="section wrap">
-              <SectionTitle
-                eyebrow="ALSO ON OUR DOCTOR PANEL"
-                title="Other specialities"
-              />
-              <div className="grid four">
-                {otherServices.map((s) => (
-                  <ServiceCard service={s} key={s.slug} />
-                ))}
-              </div>
-            </div>
-          </section>
-        </>
-      )}
       {service && (
         <>
           <section className="section wrap split">

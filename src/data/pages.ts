@@ -18,9 +18,11 @@ export const pages: Record<
       'An integrated hub & spoke network bringing specialist expertise closer to communities.',
   },
   specialities: {
-    title: 'Expertise for every stage of life',
+    eyebrow: 'OUR SPECIALITIES',
+    breadcrumb: 'Specialities',
+    title: 'Specialised expertise. Coordinated care. Better outcomes.',
     description:
-      'Explore the clinical specialities and services of Ace Group of Hospitals.',
+      'At SKACE Health, our superspeciality services are designed around one principle: every patient should have access to the right specialist, the right intervention and the right level of care at the right time.',
   },
   doctors: {
     title: 'Meet our specialists',
