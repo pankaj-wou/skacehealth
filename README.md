@@ -27,7 +27,7 @@ Forms validate locally and show demo confirmation. They do not transmit or persi
 - Hospitals & Clinics: Network plus 7 facility detail pages; 2 superspeciality hubs (Kalyan West, Diva; 50 beds each), 5 satellite general hospitals (Ambernath, Kalyan East, Titwala, Ambivli, Murbad; 25–35 beds each) and 10 micro clinics (locations to be confirmed).
 - Doctors: searchable panel plus 30 company-supplied profile pages. Schedules and facility assignments remain unconfirmed.
 - Services: 16 detail pages with the supplied clinical areas, services, related panel members and FAQs.
-- Leadership & Team: Dr. Sandeep Mahajan, Dr. Kuldeep Mahajan, Dr. Hemachandran K and Dr. Rajesh Kumar KV, with photographs.
+- Leadership & Team: Dr. Kuldeep Mahajan, Mr. Sandeep Mahajan, Dr. Hemachandran K and Dr. Rajesh Kumar KV, with photographs.
 - Appointments: frontend-only guided request form, dependent selections and demo confirmation.
 - Contact & Social: contact form, six sample contact channels, addresses and labelled social channel examples.
 - Website Content: About, Patient Services, synthetic testimonials, Careers and News.

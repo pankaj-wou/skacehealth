@@ -425,7 +425,7 @@ export function SitePage({ path }: { path: string }) {
                 technology.
               </p>
               <p>
-                This research is led by Dr. Kuldeep Mahajan, with Dr. Sandeep
+                This research is led by Dr. Kuldeep Mahajan, with Mr. Sandeep
                 Mahajan and the research team. It is not an available diagnostic
                 tool on this website.
               </p>
@@ -497,7 +497,7 @@ export function SitePage({ path }: { path: string }) {
             />
             <p className="lead">
               Dr. Kuldeep Mahajan brings 20 years of critical-care experience.
-              Dr. Sandeep Mahajan brings 16 years in hospital operations and
+              Mr. Sandeep Mahajan brings 16 years in hospital operations and
               management.
             </p>
             <p>
@@ -621,11 +621,11 @@ export function SitePage({ path }: { path: string }) {
               {[
                 [
                   'Preparing for your visit',
-                  'The sample preparation checklist includes identification, previous reports and a medication list. A care coordinator would share any service-specific instructions.',
+                  'Bring a photo identity document, previous reports and a list of your current medicines. Our team will share any test-specific instructions when you book.',
                 ],
                 [
                   'Insurance assistance',
-                  'An illustrative help desk explains documents and pre-authorisation. No insurer, TPA or cashless arrangement is confirmed.',
+                  'Call us before your visit to check whether your insurance provider or TPA is accepted, and which documents you will need.',
                 ],
                 [
                   'Emergency information',

@@ -1,14 +1,5 @@
 export const team = [
   {
-    name: 'Dr. Sandeep Mahajan',
-    role: 'CEO & Co-founder',
-    image: '/images/team/sandeep-mahajan.jpg',
-    qualification:
-      'MS, Liverpool John Moores University, UK · Bachelor’s studies, Nagpur',
-    bio: 'Dr. Sandeep Mahajan has 16 years of experience in hospital operations, quality measures, human resource management and other aspects of hospital management. As CEO & Co-founder of Ace Hospital & Research Centre, he is interested in digitising hospital management and services through artificial intelligence, machine learning and the Internet of Things. Under Dr. Kuldeep Mahajan’s leadership, he is working on the proposed “Prediction of Chronic Diseases (Virtual Super Specialist Doctor)” preventive healthcare platform.',
-    achievements: [],
-  },
-  {
     name: 'Dr. Kuldeep Mahajan',
     role: 'Founder & MD',
     image: '/images/team/kuldeep-mahajan.jpg',
@@ -20,6 +11,15 @@ export const team = [
       'Certificate of Appreciation from the Elaxim Indian Registry for Efficacy & Safety of Tenecteplase in high-risk Indian patients with STEMI; the supplied profile references Indian Heart Journal (2011), Gennova.',
       'Attended international critical-care conferences as an Indian representative.',
     ],
+  },
+  {
+    name: 'Mr. Sandeep Mahajan',
+    role: 'CEO & Co-founder',
+    image: '/images/team/sandeep-mahajan.jpg',
+    qualification:
+      'MS, Liverpool John Moores University, UK · Bachelor’s studies, Nagpur',
+    bio: 'Mr. Sandeep Mahajan has 16 years of experience in hospital operations, quality measures, human resource management and other aspects of hospital management. As CEO & Co-founder of Ace Hospital & Research Centre, he is interested in digitising hospital management and services through artificial intelligence, machine learning and the Internet of Things. Under Dr. Kuldeep Mahajan’s leadership, he is working on the proposed “Prediction of Chronic Diseases (Virtual Super Specialist Doctor)” preventive healthcare platform.',
+    achievements: [],
   },
   {
     name: 'Dr. Hemachandran K',
